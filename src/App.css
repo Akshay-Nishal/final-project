@@ -1,38 +1,247 @@
-.App {
-  text-align: center;
+*{
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  color:white;
+  list-style: none;
+}
+body{
+  background-color: #4e657a;
+}
+.flex{
+  display: flex;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/***********
+login-page
+***********/
+.form{
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* justify-content: center; */
+}
+.login-head{
+  display: flex;
+  width: 100%;
+  font-size: 15px;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100px;
+  background-color:#567086;
 }
 
-.App-link {
-  color: #61dafb;
+form{
+  margin-top: 50px;
+  width: 400px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  background-color:#435c70;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+form p{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+form label{
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+form input{
+  margin-bottom: 20px;
+  width: calc(100% - 24px);
+  height: 45px;
+  border: none;
+  padding: 0px 10px;
+  background-color:#4e657a;
+  transition: 0.25s;
+  outline: none;
+  border: 2px solid #3a4b5b;
+}
+
+input:focus {
+  border: 2px solid #7292b1;
+}
+
+form button{
+  margin-top: 10px;
+  background-color: orange;
+  border: 1px solid orange;
+  transition: 0.3s;
+  height: 45px;
+  font-size: 15px;
+}
+
+form button:hover{
+  background-color: #435c70;
+  color: orange;
+}
+
+#FP{
+  margin-top: 25px;
+}
+
+/******
+footer
+******/
+#footer {
+  /* position:absolute; */
+  margin-top: 80px;
+  bottom:0;
+  width:100%;
+  height:80px;   /* Height of the footer */
+  background:#567086;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background:#3a4b5b
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:#7292b1;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #89aed4;
+}
+
+
+/******
+NavBar
+******/
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height:100px;
+  padding: 0px 50px;
+  flex-direction: row;
+  background-color: #567086;
+}
+.navbar h1{
+  font-size: 25px;
+}
+
+.menu{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  transition: 0.25s ease-in-out;
+}
+
+a{
+  display: flex;
+  height: 100px;
+  padding: 0px 25px;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s ease-in-out;
+  
+}
+a:hover *{
+  /* background-color: green; */
+  color:orange;
+}
+.active:hover *{
+  color:white;
+}
+.active{
+  background-color: orange;
+}
+
+.css-i4bv87-MuiSvgIcon-root{
+  font-size: 2rem !important;
+}
+.LinkItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 1s ease-in-out;
+}
+.LinkItem p{
+  font-size: 15px;
+}
+
+#logout{
+  font-size: 15px;
+  background-color: #567086;
+  border:none;
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+#logout:hover{
+  color:orange;
+}
+
+#ham{
+  cursor: pointer;
+  /* display: none; */
+  border: none;
+  padding: 3px 7px;
+  border: 0.5px solid white;
+  background-color:#4e657a;
+  transition: all 0.2s ease;
+  box-shadow: rgba(255, 255, 255, 0.1) 0 1px 1px 2px;
+}
+#ham:hover *{
+  color:orange;
+}
+
+.ham-menu{
+  position: absolute;
+  right: 50px;
+  background-color: #567086;
+}
+.ham-menu a{
+  height: 50px;
+  padding: 0px 40px;
+}
+.ham-menu .LinkItem{
+  flex-direction: row;
+}
+.ham-menu .css-i4bv87-MuiSvgIcon-root{
+  font-size: 1.5rem !important;
+  margin-right: 7px;
+}
+.hamburger{
+  display: none;
+}
+.hamburger #logout{
+  height: 50px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .menu{
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .hamburger{
+    display: block;
   }
+}
+
+
+
+
+/************
+dashboard
+************/
+.dashboard{
+  padding: 50px 7%;
 }
