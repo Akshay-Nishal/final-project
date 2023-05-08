@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import '../App.css'
-import {NavLink} from 'react-router-dom'
-import Hamburger from 'hamburger-react'
+import {NavLink} from 'react-router-dom';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import FeedOutlinedIcon from '@mui/icons-material/FeedOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';

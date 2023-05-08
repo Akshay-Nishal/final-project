@@ -4,9 +4,8 @@ import { DataContext } from '../contexts/maindata';
 
 
 export default function Dashboard() {
-  console.log(DataContext);
   const {accounts,setAccounts,dashboard,setDashboard,products,setProducts} = useContext(DataContext)
-  console.log(dashboard);
+  console.log('ACC--- ',accounts);
   return (
     <div className='dashboard'>
       <p>Welcome back, <span>Admin</span></p>

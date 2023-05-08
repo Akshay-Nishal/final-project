@@ -1,10 +1,9 @@
+
 import { createContext,useState } from "react";
 
 // the actual value that you need to access.
 export const UserContext= createContext({
     login:false,
-    currentUser: null,
-    setCurrentUser:() => null,
     setlogin:() => null
 })
 /* current context value, as given by the nearest context provider for the given context. */

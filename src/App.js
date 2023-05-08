@@ -1,15 +1,8 @@
 import './App.css';
-import Navbar from './components/navbar';
-import { BrowserRouter, Route, Router, RouterProvider, Routes } from 'react-router-dom';
-import Account from './screens/account';
-import Settings from './screens/settings';
-import Dashboard from './screens/dashboard';
-import Reports from './screens/reports';
-import Products from './screens/products';
-import { useEffect, useState, useContext } from 'react';
-import { DataContext } from './contexts/maindata';
-import { UserContext } from './contexts/currentuser';
 import Footer from './components/footer';
+import Home from './screens/home';
+import { DataContext } from './contexts/maindata';
+import { useEffect, useState, useContext } from 'react';
 function App(){
 
   const {accounts,setAccounts,dashboard,setDashboard,products,setProducts} = useContext(DataContext)
@@ -18,12 +11,11 @@ function App(){
     .then(res=>res.json())
     .then((items) => {
       setAccounts(items.accountsPage)
-      setDashboard(items.dashboardPage)
+      setDashboard(items.dasbhoardPage)
       setProducts(items.setpdoductsPage)
-      console.log(items);
-      console.log("Accouts ---- ",accounts);
       })
     },[])
+
   var Login;
   if(localStorage.getItem('login')){
     Login = localStorage.getItem('login')
@@ -48,22 +40,9 @@ function App(){
   return (
     <div className="App">
       {(Login=='true')?
-      <BrowserRouter>
-      <Navbar/>
-      {/* <h1>{currentUser.name}</h1> */}
-      <Routes>
-        <Route path="/" element={<Dashboard/>}></Route>
-        {/* <Route path="/products" element={<ProductScreen products={products}/>}></Route> */}
-        <Route path="/products" element={<Products/>}></Route>
-        <Route path="/reports" element={<Reports/>}></Route>
-        <Route path="/account" element={<Account/>}></Route>
-        <Route path="/settings" element={<Settings/>}></Route>
-      </Routes>
-      <Footer/>
-    </BrowserRouter>
+      <Home/>
       :
       <div className="form">
-        {console.log("Dash -- ",dashboard)}
         <div className='login-head'>
           <center><h1>Please login to continue to website</h1>
           </center>
